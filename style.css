@@ -56,13 +56,13 @@ input::placeholder {
 }
 
 .book-store {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 0.5rem;
-background-color: rgb(189, 182, 182);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: rgb(189, 182, 182);
 }
 
 .book-title {
-list-style: none;
+  list-style: none;
 }
