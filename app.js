@@ -2,7 +2,7 @@ const bookDiv = document.querySelector('#books > ul');
 const form = document.querySelector('.add-book');
 
 // list of books
-let bookList = JSON.parse(localStorage.getItem('book_info'));
+let bookList = [] || JSON.parse(localStorage.getItem('book_info'));
 
 // read books to view
 function readValue(books) {
