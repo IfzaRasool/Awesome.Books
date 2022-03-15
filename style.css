@@ -11,23 +11,20 @@ header h1 {
   margin: 2rem;
 }
 
-.books {
+#books {
   margin-left: 2rem;
 }
 
-.each-book {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.4rem;
-  gap: 0.5rem;
-  border: 1px solid black;
-}
-
 .remove-btn {
-  max-width: 6rem;
+  max-width: 5rem;
+  max-height: 2rem;
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
+  margin-left: 20rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px #999;
 }
 
 .add-book {
@@ -49,20 +46,49 @@ input::placeholder {
 }
 
 .add-btn {
-  max-width: 10rem;
-  padding: 0.5rem 2rem;
+  max-width: 5rem;
+  padding: 0.5rem;
+  margin-left: 12rem;
   font-weight: bold;
   font-size: 1rem;
 }
 
-.book-store {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.5rem;
-  background-color: rgb(189, 182, 182);
+.main-heading {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1rem;
 }
 
-.book-title {
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  border: 0 solid black;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+}
+
+.w-50 {
+  width: 50%;
+  padding: 0.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(230, 226, 228);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
