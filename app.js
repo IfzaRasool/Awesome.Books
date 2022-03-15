@@ -1,6 +1,9 @@
+
+
 class BooksCollection {
   constructor() {
     this.bookDiv = document.querySelector('#books > ul');
+    this.ul = document.querySelector('ul');
     this.form = document.querySelector('.add-book');
     this.bookList = [] || JSON.parse(localStorage.getItem('book_info'));
   }
@@ -8,15 +11,19 @@ class BooksCollection {
   // read books to view
   readValue(books) {
     this.bookDiv.innerHTML = '';
+    this.ul.style.borderWidth= "0px";
 
     if (books) {
+      
       books.forEach((book, index) => {
+      
+        this.ul.style.borderWidth= "2px";
         const li = document.createElement('li');
-        li.innerHTML = `<span>${book.title_name}</span><br> 
-         <span>${book.author_name}</span><br>
-         <button class="remove-btn" data-id="${index}">remove</button><hr>`;
-
+        li.innerHTML = `<div class="w-50"><span>"${book.title_name}" by</span>
+         <span>${book.author_name}</span></div>
+         <button class="remove-btn" data-id="${index}">remove</button><br>`;
         this.bookDiv.appendChild(li);
+     
       });
     }
   }
@@ -28,6 +35,7 @@ class BooksCollection {
       title_name: this.form.elements.title.value,
       author_name: this.form.elements.author.value,
     });
+    
 
     // update local storage
     localStorage.setItem('book_info', JSON.stringify(this.bookList));
